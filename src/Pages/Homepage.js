@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 function Homepage() {
   const [activeTab, setActiveTab] = useState("login")
-  const [email, setEmail] = useState("m.student@university.ac.za")
+  const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [role, setRole] = useState("Student")
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -30,9 +30,9 @@ function Homepage() {
       );
   
       if (user) {
-        alert(`Login successful! Welcome, ${role}!`);
+        // alert(`Login successful! Welcome, ${role}!`);
         if (role === "Student") {
-          navigate("/student-dashboard");
+          navigate("/landingpg");
         } else if (role === "Lecturer") {
           navigate("/lecturer-dashboard");
         } else if (role === "Admin") {
